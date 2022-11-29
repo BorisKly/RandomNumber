@@ -19,8 +19,8 @@ class NumberFactsView: UIView {
         text.borderStyle =  .none
         text.layer.cornerRadius = CGFloat(CornerRadius.forTextFields)
         text.textColor = Colors.colorText1
-
-        text.leftViewMode = .always
+        text.textAlignment = .center
+        //text.leftViewMode = .always
         text.clearButtonMode = .always
         text.returnKeyType = .done
         text.placeholder = "Enter Number You Like"
@@ -34,7 +34,7 @@ class NumberFactsView: UIView {
         let btn = UIButton()
         btn.backgroundColor = Colors.color1
         btn.setTitleColor(Colors.color5, for: .normal)
-        btn.setTitle("Get Fact", for: .normal)
+        btn.setTitle("Get fact about entered number", for: .normal)
         btn.setTitle("Pressed...", for: .highlighted)
         btn.addTarget(self, action: #selector(getFactTapped), for: .touchDown)
         btn.clipsToBounds = true
@@ -58,7 +58,7 @@ class NumberFactsView: UIView {
         let table = UITableView()
         //table.translatesAutoresizingMaskIntoConstraints = false
         table.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        table.backgroundColor = Colors.background1
+        table.backgroundColor = Colors.colorSys
         return table
     }()
 
