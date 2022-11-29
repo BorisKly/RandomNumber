@@ -34,7 +34,7 @@ class NumberFactsViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            mainView?.backgroundColor = UIColor.systemGreen
+            mainView?.backgroundColor = Colors.colorSys
             mainView?.myTableView.delegate = self
             mainView?.myTableView.dataSource = self
             mainView?.setupUI()

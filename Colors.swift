@@ -15,6 +15,8 @@ class Colors  {
     static let color4  =  UIColor(red: 0.5, green: 0.5, blue: 0.4, alpha: 1)
     static let color5 = UIColor.black
 
+    static let colorSys = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)  //£colorLiteral
+
     static let color11  =  UIColor(red: 0.9, green: 0.8, blue: 0.7, alpha: 1)
     static let color12  =  UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
 

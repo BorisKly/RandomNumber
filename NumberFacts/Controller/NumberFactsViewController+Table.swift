@@ -17,17 +17,18 @@ extension NumberFactsViewController: UITableViewDataSource,
     // MARK: - UITableViewDataSourse
 
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1
+            return model.jsonArray.count
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             print("cellcellcell")
             let cell = tableView.dequeueReusableCell(withIdentifier: indentifire, for: indexPath) as? NumberFactsViewCell
-//            let number = model.jsonPB[indexPath.row]
             cell?.number.backgroundColor = Colors.color3
+
             cell?.fact.backgroundColor = Colors.color4
-            cell?.fact.text = model.jsonB?.text
-            cell?.number?.text = String(model.jsonB?.number ?? 0)
+            cell?.number?.text = String(model.jsonArray[indexPath.row]?.number ?? 0)
+            cell?.fact.text = model.jsonArray[indexPath.row]?.text
+
            cell?.backgroundColor = Colors.background2
             return
                 cell ?? UITableViewCell()
