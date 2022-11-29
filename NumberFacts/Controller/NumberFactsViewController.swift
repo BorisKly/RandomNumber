@@ -7,15 +7,16 @@
 
 import UIKit
 
-enum JumpToScreensFromFirst {
-    case thirdScreen
-    case secondScreen
+protocol NumberFactsViewControllerDelegate: AnyObject {
+    func reload()
 }
 
 
 class NumberFactsViewController: UIViewController {
 
         //public var eventHandler: ((JumpToScreensFromFirst) -> Void)?
+
+    public var model: NumberFactsModel = NumberFactsModel()
 
         private var mainView: NumberFactsView? {
             return self.view as? NumberFactsView
@@ -38,7 +39,7 @@ class NumberFactsViewController: UIViewController {
             mainView?.myTableView.dataSource = self
             mainView?.setupUI()
             mainView?.numberTextField.delegate = self
-      
+            mainView?.delegate = self
 
         }
     }
@@ -56,15 +57,12 @@ extension NumberFactsViewController: UITextFieldDelegate {
     }
 }
 
-//    extension FirstViewController: FirstViewControllerDelegate {
-//
-//        func goToSecond() {
-//            self.eventHandler?(.secondScreen)
-//        }
-//
-//        func goToThird() {
-//            self.eventHandler?(.thirdScreen)
-//        }
-//
-//
-//    }
+extension NumberFactsViewController: NumberFactsViewControllerDelegate {
+    func reload() {
+        guard let number = self.mainView?.numberTextField.text else { return }
+        model.setNumberFactsModel(data: number) { [weak self] in
+            self?.mainView?.myTableView.reloadData()
+        }
+    }
+}
+
