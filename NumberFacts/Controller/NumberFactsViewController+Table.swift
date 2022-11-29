@@ -17,7 +17,7 @@ extension NumberFactsViewController: UITableViewDataSource,
     // MARK: - UITableViewDataSourse
 
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
+            return 1
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,9 +26,8 @@ extension NumberFactsViewController: UITableViewDataSource,
 //            let number = model.jsonPB[indexPath.row]
             cell?.number.backgroundColor = Colors.color3
             cell?.fact.backgroundColor = Colors.color4
-            cell?.fact.text = "222"
-            cell?.number?.text = "111"
-//            cell?.rate?.text = String(number?.saleRate ?? 0 )
+            cell?.fact.text = model.jsonB?.text
+            cell?.number?.text = String(model.jsonB?.number ?? 0)
            cell?.backgroundColor = Colors.background2
             return
                 cell ?? UITableViewCell()

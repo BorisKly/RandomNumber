@@ -11,7 +11,7 @@ import PinLayout
 
 class NumberFactsView: UIView {
 
-  //  weak public var delegate: NumberFactsViewControllerDelegate?
+    weak public var delegate: NumberFactsViewControllerDelegate?
 
     public var numberTextField: UITextField = {
         let text = UITextField()
@@ -36,7 +36,7 @@ class NumberFactsView: UIView {
         btn.setTitleColor(Colors.color5, for: .normal)
         btn.setTitle("Get Fact", for: .normal)
         btn.setTitle("Pressed...", for: .highlighted)
-       // btn.addTarget(self, action: #selector(goToSecond), for: .touchDown)
+        btn.addTarget(self, action: #selector(getFactTapped), for: .touchDown)
         btn.clipsToBounds = true
         btn.isHighlighted = false
         return btn
@@ -84,6 +84,11 @@ class NumberFactsView: UIView {
     public func setupUI() {
         print("regregreg")
         createTable()
+    }
+
+    @objc private func getFactTapped() {
+        print("getFactTapped")
+        self.delegate?.reload()
     }
 
     private func createTable() {
