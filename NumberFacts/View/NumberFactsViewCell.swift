@@ -13,6 +13,9 @@ class NumberFactsViewCell: UITableViewCell {
 
     @IBOutlet weak var fact: UILabel!
 
+
+    // MARK: Override Methods
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,27 +30,26 @@ class NumberFactsViewCell: UITableViewCell {
         self.setConstraintsForOneTableCell()
     }
 
+    // MARK: Private Methods
+
     private func setOptionsForOneTableCell() {
-        number.backgroundColor = Colors.colorCellBackground
+        number.backgroundColor = Colors.colorSys2
         number.numberOfLines = 0
         number.adjustsFontSizeToFitWidth = true
-        fact.backgroundColor = Colors.colorCollectionBackground
+        fact.backgroundColor = Colors.colorSys2
         fact.numberOfLines = 0
     }
-
+    
     private func setConstraintsForOneTableCell() {
-       number.pin
+        number.pin
             .top(pin.safeArea)
             .left(pin.safeArea)
             .width(100)
             .margin(2)
-
+        
         fact.pin
             .top()
             .after(of: number)
             .margin(2)
-
-
-}
-    
+    }
 }

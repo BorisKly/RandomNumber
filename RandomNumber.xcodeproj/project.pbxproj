@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92B9E05A41BC7CE25B3CF615 /* Pods_RandomNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF135924DC82DCBEA648547 /* Pods_RandomNumber.framework */; };
+		EC9BE33629373D5400B340D9 /* NumberFactsFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33529373D5400B340D9 /* NumberFactsFullScreenViewController.swift */; };
+		EC9BE33829373E5F00B340D9 /* NumberFactsFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33729373E5F00B340D9 /* NumberFactsFullScreenView.swift */; };
+		EC9BE33A29374CAF00B340D9 /* NumberFactsFullScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33929374CAF00B340D9 /* NumberFactsFullScreenModel.swift */; };
 		ECADC902293699E200E43525 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECADC901293699E200E43525 /* NetworkManager.swift */; };
 		ECADC90429369AF800E43525 /* NumberFactsResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECADC90329369AF800E43525 /* NumberFactsResponseData.swift */; };
 		ECADC90729369BA200E43525 /* NumberFactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECADC90629369BA200E43525 /* NumberFactsData.swift */; };
@@ -34,6 +37,9 @@
 		2EF135924DC82DCBEA648547 /* Pods_RandomNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3363DCDC7BECAA090E3AACDA /* Pods-RandomNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomNumber.release.xcconfig"; path = "Target Support Files/Pods-RandomNumber/Pods-RandomNumber.release.xcconfig"; sourceTree = "<group>"; };
 		9B23C2457EAA61BAFC20A80B /* Pods-RandomNumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomNumber.debug.xcconfig"; path = "Target Support Files/Pods-RandomNumber/Pods-RandomNumber.debug.xcconfig"; sourceTree = "<group>"; };
+		EC9BE33529373D5400B340D9 /* NumberFactsFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenViewController.swift; sourceTree = "<group>"; };
+		EC9BE33729373E5F00B340D9 /* NumberFactsFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenView.swift; sourceTree = "<group>"; };
+		EC9BE33929374CAF00B340D9 /* NumberFactsFullScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenModel.swift; sourceTree = "<group>"; };
 		ECADC901293699E200E43525 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ECADC90329369AF800E43525 /* NumberFactsResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsResponseData.swift; sourceTree = "<group>"; };
 		ECADC90629369BA200E43525 /* NumberFactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsData.swift; sourceTree = "<group>"; };
@@ -87,6 +93,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC9BE33129373CD600B340D9 /* NumberFactsFullScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EC9BE33429373D0E00B340D9 /* Controller */,
+				EC9BE33329373D0400B340D9 /* View */,
+				EC9BE33229373CFD00B340D9 /* Model */,
+			);
+			path = NumberFactsFullScreen;
+			sourceTree = "<group>";
+		};
+		EC9BE33229373CFD00B340D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC9BE33929374CAF00B340D9 /* NumberFactsFullScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC9BE33329373D0400B340D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC9BE33729373E5F00B340D9 /* NumberFactsFullScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC9BE33429373D0E00B340D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC9BE33529373D5400B340D9 /* NumberFactsFullScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		ECADC8FF2936977B00E43525 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +152,7 @@
 				ECC45160292D139100A23B0B /* SomeConstraints.swift */,
 				ECC5D632292C05F10093BA71 /* Colors.swift */,
 				ECC5D62A292C04D70093BA71 /* NumberFacts */,
+				EC9BE33129373CD600B340D9 /* NumberFactsFullScreen */,
 				ECC5D621292C040C0093BA71 /* Coordinators */,
 				ECC5D60C292C03B20093BA71 /* RandomNumber */,
 				ECC5D60B292C03B20093BA71 /* Products */,
@@ -295,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9BE33829373E5F00B340D9 /* NumberFactsFullScreenView.swift in Sources */,
 				ECC45161292D139100A23B0B /* SomeConstraints.swift in Sources */,
 				ECC45168292D274A00A23B0B /* NumberFactsViewCell.swift in Sources */,
 				ECADC90429369AF800E43525 /* NumberFactsResponseData.swift in Sources */,
@@ -305,8 +347,10 @@
 				ECC5D612292C03B20093BA71 /* ViewController.swift in Sources */,
 				ECC5D62F292C051D0093BA71 /* NumberFactsViewController.swift in Sources */,
 				ECC5D625292C04450093BA71 /* AppCoordinator.swift in Sources */,
+				EC9BE33629373D5400B340D9 /* NumberFactsFullScreenViewController.swift in Sources */,
 				ECC5D60E292C03B20093BA71 /* AppDelegate.swift in Sources */,
 				ECC45163292D1FF100A23B0B /* NumberFactsViewController+Table.swift in Sources */,
+				EC9BE33A29374CAF00B340D9 /* NumberFactsFullScreenModel.swift in Sources */,
 				ECADC902293699E200E43525 /* NetworkManager.swift in Sources */,
 				ECC5D631292C05860093BA71 /* NumberFactsView.swift in Sources */,
 				ECADC90929369C9A00E43525 /* NumberFactsModel.swift in Sources */,
