@@ -10,6 +10,7 @@ import UIKit
 protocol NumberFactsViewControllerDelegate: AnyObject {
     func reloadTableForNumber()
     func reloadTableForRandomNumber()
+    func alertError(title: String, message: String)
 }
 
 enum NumberFactsJumpTo {
@@ -82,6 +83,15 @@ extension NumberFactsViewController: NumberFactsViewControllerDelegate {
          model.setNumberFactsModel(data: String(number)) { [weak self] in
             self?.mainView?.myTableView.reloadData()
          }
+    }
+
+    func alertError(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertOk = UIAlertAction(title: "OK", style: .default)
+
+        alertController.addAction(alertOk)
+
+        present(alertController, animated: true, completion: nil)
     }
 }
 
