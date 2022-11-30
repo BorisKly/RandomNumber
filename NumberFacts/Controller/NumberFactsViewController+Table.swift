@@ -16,23 +16,18 @@ extension NumberFactsViewController: UITableViewDataSource,
 
     // MARK: - UITableViewDataSourse
 
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return model.jsonArray.count
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model.jsonArray.count
+    }
 
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            print("cellcellcell")
-            let cell = tableView.dequeueReusableCell(withIdentifier: indentifire, for: indexPath) as? NumberFactsViewCell
-            cell?.number.backgroundColor = Colors.color3
-
-            cell?.fact.backgroundColor = Colors.color4
-            cell?.number?.text = String(model.jsonArray[indexPath.row]?.number ?? 0)
-            cell?.fact.text = model.jsonArray[indexPath.row]?.text
-
-           cell?.backgroundColor = Colors.background2
-            return
-                cell ?? UITableViewCell()
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: indentifire, for: indexPath) as? NumberFactsViewCell
+        cell?.number?.text = String(model.jsonArray[indexPath.row]?.number ?? 0)
+        cell?.fact.text = model.jsonArray[indexPath.row]?.text
+        cell?.backgroundColor = Colors.colorSys3
+        return
+            cell ?? UITableViewCell()
+    }
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -40,9 +35,9 @@ extension NumberFactsViewController: UITableViewDataSource,
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("uuuuuuuu")
+        guard let item = model.jsonArray[indexPath.row] else {
+            return
+        }
+        self.eventHandler?(.detailNumberFactsEvent(item))
     }
-
-
-
 }

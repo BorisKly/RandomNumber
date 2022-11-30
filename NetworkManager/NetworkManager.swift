@@ -14,6 +14,8 @@ class NetworkManager {
 
     public static let shared = NetworkManager()
 
+    // MARK: - Private Properties
+
     private let cache = NSCache<NSString, NSString>()
 
     private let urlSearch = "http://numbersapi.com/"
@@ -34,9 +36,6 @@ class NetworkManager {
         if let discription = cache.object(forKey: key) {
             let viewData = NumberFactsData(text: discription as String , number: key.integerValue)
             onSuccess(viewData)
-            print("!!!!!!!!!!!!!!!!!")
-            print(viewData)
-            print("data from cache")
             return
         }
         let task = URLSession.shared.dataTask(with: url ) { (data, _, _) in

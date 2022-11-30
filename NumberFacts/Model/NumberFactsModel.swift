@@ -10,18 +10,18 @@ import Foundation
 
 class NumberFactsModel {
 
+    // MARK: - Public Properties
+
     public var jsonArray: [NumberFactsData?] = []
-    public var jsonB : NumberFactsData?
+
+    // MARK: Public Methods
 
     public func setNumberFactsModel(data : String, onSuccess: @ escaping () -> Void) {
         NetworkManager.shared.resultOfNumberSearch(dataR: data, onSuccess:  { [weak self] json in
             self?.jsonArray.insert(json, at: 0)
-        //    self?.jsonArray.append(json)
-            self?.jsonB = json
             DispatchQueue.main.async {
                 onSuccess()
             }
         }, onError: { print($0)} )
     }
-
 }

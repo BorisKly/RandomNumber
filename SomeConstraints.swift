@@ -13,7 +13,7 @@ public enum CornerRadius {
 }
 
 public enum Font {
-    static let  forTextFields = UIFont(name: "Apple SD Gothic Neo", size: 20)
+    static let  forTextFields = UIFont(name: "Apple SD Gothic Neo", size: 25)
 
     static let  forLabel = UIFont(name: "Apple SD Gothic Neo", size: 20)
 

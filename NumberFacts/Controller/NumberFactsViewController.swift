@@ -8,42 +8,54 @@
 import UIKit
 
 protocol NumberFactsViewControllerDelegate: AnyObject {
-    func reload()
+    func reloadTableForNumber()
+    func reloadTableForRandomNumber()
 }
 
+enum NumberFactsJumpTo {
+    case detailNumberFactsEvent(NumberFactsData)
+}
 
 class NumberFactsViewController: UIViewController {
 
-        //public var eventHandler: ((JumpToScreensFromFirst) -> Void)?
+    // MARK: Public Properties
+
+    public var eventHandler: ((NumberFactsJumpTo)->())?
 
     public var model: NumberFactsModel = NumberFactsModel()
 
-        private var mainView: NumberFactsView? {
-            return self.view as? NumberFactsView
-        }
+    // MARK: Private Properties
 
-        public static func startVC() -> Self {
-            return Self.init()
-        }
-
-        override func loadView() {
-            let codeView = NumberFactsView(frame: CGRect.zero)
-            self.view = codeView
-        }
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-
-            mainView?.backgroundColor = Colors.colorSys
-            mainView?.myTableView.delegate = self
-            mainView?.myTableView.dataSource = self
-            mainView?.setupUI()
-            mainView?.numberTextField.delegate = self
-            mainView?.delegate = self
-
-        }
+    private var mainView: NumberFactsView? {
+        return self.view as? NumberFactsView
     }
 
+    // MARK: Override Methods
+
+    override func loadView() {
+        let codeView = NumberFactsView(frame: CGRect.zero)
+        self.view = codeView
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mainView?.backgroundColor = Colors.colorSys
+        mainView?.myTableView.delegate = self
+        mainView?.myTableView.dataSource = self
+        mainView?.setupUI()
+        mainView?.numberTextField.delegate = self
+        mainView?.delegate = self
+
+    }
+
+    // MARK: Public Methods
+
+    public static func startVC() -> Self {
+        return Self.init()
+    }
+}
+
+// MARK: Extensions
 
 extension NumberFactsViewController: UITextFieldDelegate {
 
@@ -58,11 +70,18 @@ extension NumberFactsViewController: UITextFieldDelegate {
 }
 
 extension NumberFactsViewController: NumberFactsViewControllerDelegate {
-    func reload() {
+
+    func reloadTableForNumber() {
         guard let number = self.mainView?.numberTextField.text else { return }
         model.setNumberFactsModel(data: number) { [weak self] in
             self?.mainView?.myTableView.reloadData()
         }
+    }
+    func reloadTableForRandomNumber() {
+         let number = Int.random(in: 0..<1000)
+         model.setNumberFactsModel(data: String(number)) { [weak self] in
+            self?.mainView?.myTableView.reloadData()
+         }
     }
 }
 

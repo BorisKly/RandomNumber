@@ -11,24 +11,31 @@ import PinLayout
 
 class NumberFactsView: UIView {
 
+    // MARK: Public Properties
+
     weak public var delegate: NumberFactsViewControllerDelegate?
 
     public var numberTextField: UITextField = {
         let text = UITextField()
         text.backgroundColor = Colors.background1
-        text.borderStyle =  .none
         text.layer.cornerRadius = CGFloat(CornerRadius.forTextFields)
         text.textColor = Colors.colorText1
         text.textAlignment = .center
-        //text.leftViewMode = .always
         text.clearButtonMode = .always
         text.returnKeyType = .done
         text.placeholder = "Enter Number You Like"
         text.font = Font.forTextFields
-        //translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
 
+    public let myTableView: UITableView = {
+        let table = UITableView()
+        table.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        table.backgroundColor = Colors.colorSys
+        return table
+    }()
+
+    // MARK: Private Properties
 
     private let firstBtn: UIButton = {
         let btn = UIButton()
@@ -48,19 +55,13 @@ class NumberFactsView: UIView {
         btn.setTitleColor(Colors.color5, for: .normal)
         btn.setTitle("Get fact about random number", for: .normal)
         btn.setTitle("Pressed...", for: .highlighted)
-       // btn.addTarget(self, action: #selector(goToThird), for: .touchDown)
+        btn.addTarget(self, action: #selector(getRandomNumberFactTapped), for: .touchDown)
         btn.clipsToBounds = true
         btn.isHighlighted = false
         return btn
     }()
 
-    public let myTableView: UITableView = {
-        let table = UITableView()
-        //table.translatesAutoresizingMaskIntoConstraints = false
-        table.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        table.backgroundColor = Colors.colorSys
-        return table
-    }()
+    // MARK: Override Methods
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,14 +82,20 @@ class NumberFactsView: UIView {
         print("Run layoutSubviews")
     }
 
+    // MARK: Public Methods
+
     public func setupUI() {
-        print("regregreg")
         createTable()
     }
 
+    // MARK: Private Methods
+
     @objc private func getFactTapped() {
-        print("getFactTapped")
-        self.delegate?.reload()
+        self.delegate?.reloadTableForNumber()
+    }
+
+    @objc private func getRandomNumberFactTapped() {
+        self.delegate?.reloadTableForRandomNumber()
     }
 
     private func createTable() {
