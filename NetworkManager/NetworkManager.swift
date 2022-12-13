@@ -27,7 +27,7 @@ class NetworkManager {
 
     // MARK: - Public Methods
 
-    public func resultOfNumberSearch(dataR: String, onSuccess: @escaping (NumberFactsData) -> Void, onError: (Error) -> Void) {
+    public func resultOfNumberSearch(dataR: String, onSuccess: @escaping (NumberFactsData) -> Void,  onError: @escaping (Error) -> Void) {
 
         guard let url = URL(string: urlSearch + "\(dataR)?json=") else {
             return
@@ -40,7 +40,13 @@ class NetworkManager {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url ) { (data, _, _) in
+        let task = URLSession.shared.dataTask(with: url) { (data, responce, error) in
+
+            if let error = error  {
+                onError(error)
+                return
+            }
+
             guard let data = data,
                   let jsonString = try? JSONDecoder().decode(NumberFactsResponseData.self, from: data) else {
                 print("Error - cannot get information from url");
@@ -55,8 +61,6 @@ class NetworkManager {
             onSuccess(viewData)
         }
         task.resume()
-
-
      }
 }
 
