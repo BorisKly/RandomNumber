@@ -31,7 +31,7 @@ extension NumberFactsViewController: UITableViewDataSource,
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 80
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

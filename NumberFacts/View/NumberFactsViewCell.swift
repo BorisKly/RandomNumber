@@ -38,18 +38,22 @@ class NumberFactsViewCell: UITableViewCell {
         number.adjustsFontSizeToFitWidth = true
         fact.backgroundColor = Colors.colorSys2
         fact.numberOfLines = 0
+        fact.adjustsFontSizeToFitWidth = true
     }
     
     private func setConstraintsForOneTableCell() {
         number.pin
             .top(pin.safeArea)
             .left(pin.safeArea)
+            .bottom(pin.safeArea)
             .width(100)
-            .margin(2)
+            .margin(4)
         
         fact.pin
-            .top()
             .after(of: number)
-            .margin(2)
+            .top(pin.safeArea)
+            .bottom(pin.safeArea)
+            .margin(4)
+            
     }
 }
