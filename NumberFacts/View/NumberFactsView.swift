@@ -23,6 +23,7 @@ class NumberFactsView: UIView {
         text.textAlignment = .center
         text.clearButtonMode = .always
         text.returnKeyType = .done
+        text.keyboardType = .numberPad
         text.placeholder = "Enter Number You Like"
         text.font = Font.forTextFields
         return text
