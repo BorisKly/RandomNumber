@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92B9E05A41BC7CE25B3CF615 /* Pods_RandomNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF135924DC82DCBEA648547 /* Pods_RandomNumber.framework */; };
+		EC1523C029675C530096ACD6 /* check.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1523BF29675C530096ACD6 /* check.swift */; };
 		EC9BE33629373D5400B340D9 /* NumberFactsFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33529373D5400B340D9 /* NumberFactsFullScreenViewController.swift */; };
 		EC9BE33829373E5F00B340D9 /* NumberFactsFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33729373E5F00B340D9 /* NumberFactsFullScreenView.swift */; };
 		EC9BE33A29374CAF00B340D9 /* NumberFactsFullScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BE33929374CAF00B340D9 /* NumberFactsFullScreenModel.swift */; };
@@ -37,6 +38,7 @@
 		2EF135924DC82DCBEA648547 /* Pods_RandomNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3363DCDC7BECAA090E3AACDA /* Pods-RandomNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomNumber.release.xcconfig"; path = "Target Support Files/Pods-RandomNumber/Pods-RandomNumber.release.xcconfig"; sourceTree = "<group>"; };
 		9B23C2457EAA61BAFC20A80B /* Pods-RandomNumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomNumber.debug.xcconfig"; path = "Target Support Files/Pods-RandomNumber/Pods-RandomNumber.debug.xcconfig"; sourceTree = "<group>"; };
+		EC1523BF29675C530096ACD6 /* check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check.swift; sourceTree = "<group>"; };
 		EC9BE33529373D5400B340D9 /* NumberFactsFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenViewController.swift; sourceTree = "<group>"; };
 		EC9BE33729373E5F00B340D9 /* NumberFactsFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenView.swift; sourceTree = "<group>"; };
 		EC9BE33929374CAF00B340D9 /* NumberFactsFullScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactsFullScreenModel.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		ECC5D601292C03B20093BA71 = {
 			isa = PBXGroup;
 			children = (
+				EC1523BF29675C530096ACD6 /* check.swift */,
 				ECADC900293699C400E43525 /* NetworkManager */,
 				ECC45160292D139100A23B0B /* SomeConstraints.swift */,
 				ECC5D632292C05F10093BA71 /* Colors.swift */,
@@ -348,6 +351,7 @@
 				ECC5D62F292C051D0093BA71 /* NumberFactsViewController.swift in Sources */,
 				ECC5D625292C04450093BA71 /* AppCoordinator.swift in Sources */,
 				EC9BE33629373D5400B340D9 /* NumberFactsFullScreenViewController.swift in Sources */,
+				EC1523C029675C530096ACD6 /* check.swift in Sources */,
 				ECC5D60E292C03B20093BA71 /* AppDelegate.swift in Sources */,
 				ECC45163292D1FF100A23B0B /* NumberFactsViewController+Table.swift in Sources */,
 				EC9BE33A29374CAF00B340D9 /* NumberFactsFullScreenModel.swift in Sources */,
