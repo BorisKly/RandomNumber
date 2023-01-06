@@ -13,6 +13,7 @@ pod 'PinLayout'
 
 pod 'SwiftLint'
 
+/ try to add RealmSwiftPod
 # pod 'RealmSwift', '=10.15.0'
 
 end
