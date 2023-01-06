@@ -54,6 +54,6 @@ class NumberFactsViewCell: UITableViewCell {
             .top(pin.safeArea)
             .bottom(pin.safeArea)
             .margin(4)
-        
+
     }
 }
