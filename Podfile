@@ -13,6 +13,6 @@ pod 'PinLayout'
 
 pod 'SwiftLint'
 
-pod 'RealmSwift', '=10.15.0'
+# pod 'RealmSwift', '=10.15.0'
 
 end
