@@ -15,7 +15,7 @@ class NumberFactsView: UIView {
 
     weak public var delegate: NumberFactsViewControllerDelegate?
 
-    public var numberTextField: UITextField = {
+    public let numberTextField: UITextField = {
         let text = UITextField()
         text.backgroundColor = Colors.background1
         text.layer.cornerRadius = CGFloat(CornerRadius.forTextFields)

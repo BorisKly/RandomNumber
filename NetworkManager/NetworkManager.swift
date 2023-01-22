@@ -13,7 +13,6 @@ class NumbersR: Object {
     @Persisted var nimberR: Int = 0
     @Persisted var textR: String = ""
 }
-//  Also you can use "cache" to save to memory items
 
 class NetworkManager {
 
@@ -22,8 +21,6 @@ class NetworkManager {
     public static let shared = NetworkManager()
 
     // MARK: - Private Properties
-
-   // private let cache = NSCache<NSString, NSString>()
 
     let realm = try! Realm()
 
@@ -44,25 +41,15 @@ class NetworkManager {
 
         guard let keyR = Int(dataR) else {return}
 
-        //  let key = NSString(string: dataR)
-
         let numbersRealmArray = realm.objects(NumbersR.self)
 
         if let itemR = numbersRealmArray.first(where: {
             $0.nimberR == keyR
         }) {
             let viewData = NumberFactsData(text: itemR.textR, number: itemR.nimberR)
-            print(itemR)
             onSuccess(viewData)
-            print("From Realm!!!")
             return
         }
-
-//        if let discription = cache.object(forKey: key) {
-//            let viewData = NumberFactsData(text: discription as String , number: key.integerValue)
-//            onSuccess(viewData)
-//            return
-//        }
 
         let task = URLSession.shared.dataTask(with: url) { (data, responce, error) in
 
@@ -90,7 +77,6 @@ class NetworkManager {
                     self.realm.add(viewDataR)
                 }
             }
-//            self.cache.setObject(viewData.text as NSString, forKey: String(viewData.number) as NSString)
 
             onSuccess(viewData)
         }
