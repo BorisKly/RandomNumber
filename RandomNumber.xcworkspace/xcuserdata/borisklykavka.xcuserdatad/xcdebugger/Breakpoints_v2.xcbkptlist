@@ -34,6 +34,116 @@
             endingLineNumber = "11"
             landmarkName = "Colors"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FD97F76B-CEF7-47DE-96C6-8960019B2CF8 - 73ac434818bf3bca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RandomNumber.Colors.deinit"
+                  moduleName = "RandomNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borisklykavka/Documents/GitHub/RandomNumber/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "FD97F76B-CEF7-47DE-96C6-8960019B2CF8 - 174ed009936f3ca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RandomNumber.Colors.__deallocating_deinit"
+                  moduleName = "RandomNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borisklykavka/Documents/GitHub/RandomNumber/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "FD97F76B-CEF7-47DE-96C6-8960019B2CF8 - fb9153710cc18ece"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RandomNumber.Colors.__allocating_init() -&gt; RandomNumber.Colors"
+                  moduleName = "RandomNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borisklykavka/Documents/GitHub/RandomNumber/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "FD97F76B-CEF7-47DE-96C6-8960019B2CF8 - 12cf32411d20b2ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RandomNumber.Colors.init() -&gt; RandomNumber.Colors"
+                  moduleName = "RandomNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borisklykavka/Documents/GitHub/RandomNumber/Colors.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F66C6127-5077-4294-8E2E-9F269EBE8AB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberFacts/Controller/NumberFactsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "mainView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9371FB8-20AA-42D4-9238-CE147BA3BE2B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberFacts/Controller/NumberFactsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loadView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18798020-BC52-4F37-A6CE-2F2608B0487F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberFacts/Controller/NumberFactsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
